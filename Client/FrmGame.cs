@@ -191,7 +191,7 @@ namespace Client
                 }
                 catch
                 {
-                    AppendTextThongBao("Mất Kết Nối Tới Máy Chủ");
+                    //AppendTextThongBao("Mất Kết Nối Tới Máy Chủ");
                     break;
                 }
             }
@@ -394,6 +394,7 @@ namespace Client
         private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
             client.Close();
+            timer1.Stop();
         }
 
 
