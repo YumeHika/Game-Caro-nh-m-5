@@ -133,6 +133,7 @@ namespace Client
                     rect = new Rectangle(0, 10, 413, 281);
                     Graphics g = panel1.CreateGraphics();
                     g.DrawImage(Thang, rect);
+                    
                 }
                 else
                     b.data = Encoding.Unicode.GetBytes("DANHCARO|," + x.ToString() + "," + y.ToString() + "," + NguoiChoi.ToString() + ",");
@@ -238,6 +239,13 @@ namespace Client
                 case "DANHSACHNGUOICHOI":
                     danhsachnguoichoi(str);
                     break;
+                case "CHOILAI":
+                    panel1.Invalidate();
+                    if (chuphong)
+                    {
+                        DuocDanh = true;
+                    }
+                    break;
 
             }
         }
@@ -283,6 +291,7 @@ namespace Client
             rect = new Rectangle(0, 10, 413, 281);
             Graphics g = panel1.CreateGraphics();
             g.DrawImage(Thua, rect);
+            
         }
         private void DanhCaRo(string str)
         {
@@ -399,11 +408,21 @@ namespace Client
 
         private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
             client.Close();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            byte[] data = new byte[1024];
+            data = Encoding.Unicode.GetBytes("CHOILAI|," + NguoiChoi + ",");
+            client.Send(data, data.Length, SocketFlags.None);
+        }
 
+        private void choilai()
+        {
+
+            
+        }
 
         private void ltbdanhsachphonggame_SelectedIndexChanged(object sender, EventArgs e)
         {

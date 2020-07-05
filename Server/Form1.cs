@@ -137,6 +137,9 @@ namespace Server
                 case "DANHSACHNGUOICHOI":
                     danhsachnguoichoi(ple);
                     break;
+                case "CHOILAI":
+                    choilai(ple);
+                    break;
                 case "CHAT":
                     SendAllClient(data);
                     break;
@@ -166,7 +169,14 @@ namespace Server
                     break;
             }
         }
-        
+
+        private void choilai(Player ple)
+        {
+            byte[] data = Encoding.Unicode.GetBytes("CHOILAI|,");
+            ple.room.plnguoichoi1.socket.Send(data, data.Length, SocketFlags.None);
+            ple.room.plnguoichoi2.socket.Send(data, data.Length, SocketFlags.None);
+        }
+
         private void danhsachnguoichoi(Player ple)
         {
             byte[] data = new byte[1024];

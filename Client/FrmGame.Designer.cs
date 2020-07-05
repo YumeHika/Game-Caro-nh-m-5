@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.plroom = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtbcontentchat = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.plroom.SuspendLayout();
             this.pnlgame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,6 +80,14 @@
             this.plroom.Size = new System.Drawing.Size(1069, 666);
             this.plroom.TabIndex = 10;
             this.plroom.Paint += new System.Windows.Forms.PaintEventHandler(this.plroom_Paint);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(6, 277);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(252, 302);
+            this.richTextBox1.TabIndex = 17;
+            this.richTextBox1.Text = "";
             // 
             // textBox1
             // 
@@ -196,6 +205,7 @@
             // pnlgame
             // 
             this.pnlgame.BackgroundImage = global::Client.Properties.Resources.bgcaro;
+            this.pnlgame.Controls.Add(this.button1);
             this.pnlgame.Controls.Add(this.pictureBox3);
             this.pnlgame.Controls.Add(this.lbidphong);
             this.pnlgame.Controls.Add(this.rtbchat);
@@ -296,13 +306,15 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // richTextBox1
+            // button1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 277);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(252, 302);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "";
+            this.button1.Location = new System.Drawing.Point(663, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmGame
             // 
@@ -352,5 +364,6 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
