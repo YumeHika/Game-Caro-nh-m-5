@@ -153,7 +153,7 @@ namespace Client
             bdata b = new bdata();
             b.data = Encoding.Unicode.GetBytes("LAYIDPHONG|,");
             client.Send(b.data, b.data.Length, SocketFlags.None);
-            rtbcontentchat.AppendText("Vào Phòng Thành Công");
+            rtbcontentchat.AppendText("\nVào Phòng Thành Công");
         }
         private void laydanhsachphonggame()
         {
