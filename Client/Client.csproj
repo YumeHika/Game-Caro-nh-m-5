@@ -33,6 +33,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -93,6 +101,8 @@
     <None Include="game caro\5a786ab701b3d_thumb900.jpg" />
     <None Include="game caro\5a801b76a3fb5_thumb900.jpg" />
     <None Include="game caro\pexels-photo-531880.jpeg" />
+    <Content Include="bmpHuman.png" />
+    <Content Include="bmpMachine.png" />
     <Content Include="hoversangsang.png" />
     <Content Include="sansang.png" />
     <Content Include="sansang2.png" />

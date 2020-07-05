@@ -58,8 +58,7 @@ namespace Client
                 Application.Exit();
             }
 
-            try
-            {
+            
 
                 byte[] data = new byte[1024];
                 data = Encoding.Unicode.GetBytes("NAMECLIENT|," + txtusername.Text + ",");
@@ -71,11 +70,7 @@ namespace Client
                 frm.client = client;
                 frm.Show();
                 this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
 
         }
 

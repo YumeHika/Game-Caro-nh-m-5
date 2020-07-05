@@ -105,10 +105,10 @@ namespace Client
             return false;
         }
         Rectangle rect = new Rectangle();
-        private Bitmap QuanO = new Bitmap("..//..//bmpHuman.png");
-        private Bitmap QuanX = new Bitmap("..//..//bmpMachine.png");
-        private Bitmap Thang = new Bitmap("..//..//thang.png");
-        private Bitmap Thua = new Bitmap("..//..//thua.png");
+        private Bitmap QuanO = Client.Properties.Resources.bmpHuman;
+        private Bitmap QuanX = Client.Properties.Resources.bmpMachine;
+        private Bitmap Thang = Client.Properties.Resources.thang;
+        private Bitmap Thua = Client.Properties.Resources.thua;
         int x, y;
         private void VeQuanCoCaro(int x, int y,int nc)
         {

@@ -17,7 +17,7 @@ namespace Server
     {
         public Form1()
         {
-            CheckForIllegalCrossThreadCalls = false;
+            //CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
         private class bdata
