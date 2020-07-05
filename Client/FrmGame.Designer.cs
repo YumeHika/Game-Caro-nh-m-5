@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.plroom = new System.Windows.Forms.Panel();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtbcontentchat = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.listView2 = new System.Windows.Forms.ListView();
             this.plroom.SuspendLayout();
             this.pnlgame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,7 +59,7 @@
             // 
             // plroom
             // 
-            this.plroom.BackgroundImage = global::Client.Properties.Resources.pexels_photo_531880;
+            this.plroom.BackgroundImage = global::Client.Properties.Resources.bgroom;
             this.plroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.plroom.Controls.Add(this.listView2);
             this.plroom.Controls.Add(this.listView1);
@@ -79,6 +79,16 @@
             this.plroom.Size = new System.Drawing.Size(1069, 666);
             this.plroom.TabIndex = 10;
             this.plroom.Paint += new System.Windows.Forms.PaintEventHandler(this.plroom_Paint);
+            // 
+            // listView2
+            // 
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(4, 56);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(254, 186);
+            this.listView2.TabIndex = 15;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
             // 
             // listView1
             // 
@@ -298,16 +308,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(4, 56);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(254, 186);
-            this.listView2.TabIndex = 15;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
             // 
             // FrmGame
             // 
