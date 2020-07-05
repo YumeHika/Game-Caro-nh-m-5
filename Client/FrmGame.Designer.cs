@@ -42,6 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btntaophongmoi = new System.Windows.Forms.Button();
             this.pnlgame = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbidphong = new System.Windows.Forms.Label();
             this.rtbchat = new System.Windows.Forms.RichTextBox();
@@ -50,7 +51,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtbcontentchat = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.plroom.SuspendLayout();
             this.pnlgame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -204,6 +206,7 @@
             // pnlgame
             // 
             this.pnlgame.BackgroundImage = global::Client.Properties.Resources.bgcaro;
+            this.pnlgame.Controls.Add(this.label4);
             this.pnlgame.Controls.Add(this.button1);
             this.pnlgame.Controls.Add(this.pictureBox3);
             this.pnlgame.Controls.Add(this.lbidphong);
@@ -218,6 +221,16 @@
             this.pnlgame.Size = new System.Drawing.Size(1069, 671);
             this.pnlgame.TabIndex = 9;
             this.pnlgame.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(663, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox3
             // 
@@ -305,15 +318,21 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(663, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 39);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "label4";
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // FrmGame
             // 
@@ -364,5 +383,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer2;
     }
 }

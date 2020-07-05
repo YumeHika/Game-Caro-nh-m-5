@@ -173,8 +173,8 @@ namespace Server
         private void choilai(Player ple)
         {
             byte[] data = Encoding.Unicode.GetBytes("CHOILAI|,");
-            ple.room.plnguoichoi1.socket.Send(data, data.Length, SocketFlags.None);
-            ple.room.plnguoichoi2.socket.Send(data, data.Length, SocketFlags.None);
+            ple.room.plnguoichoi1?.socket.Send(data, data.Length, SocketFlags.None);
+            ple.room.plnguoichoi2?.socket.Send(data, data.Length, SocketFlags.None);
         }
 
         private void danhsachnguoichoi(Player ple)
@@ -224,6 +224,7 @@ namespace Server
                     ple.room = null;
                 }
             }
+
 
         }
         private void vaophong(string str,Player ple)
