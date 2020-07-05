@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             this.plroom = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btntaophongmoi = new System.Windows.Forms.Button();
             this.pnlgame = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbidphong = new System.Windows.Forms.Label();
@@ -51,7 +53,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtbcontentchat = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.plroom.SuspendLayout();
             this.pnlgame.SuspendLayout();
@@ -62,8 +63,8 @@
             // 
             // plroom
             // 
-            this.plroom.BackgroundImage = global::Client.Properties.Resources.bgroom;
-            this.plroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.plroom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("plroom.BackgroundImage")));
+            this.plroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.plroom.Controls.Add(this.richTextBox1);
             this.plroom.Controls.Add(this.textBox1);
             this.plroom.Controls.Add(this.listView2);
@@ -113,12 +114,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(-1, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(288, 25);
+            this.label3.Size = new System.Drawing.Size(273, 30);
             this.label3.TabIndex = 13;
             this.label3.Text = "THÀNH VIÊN ONNLINE";
             // 
@@ -126,29 +127,31 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(1, 245);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.Size = new System.Drawing.Size(81, 30);
             this.label2.TabIndex = 11;
             this.label2.Text = "CHAT";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(173, 597);
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(177, 587);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 41);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Gửi";
+            this.button3.Text = "send";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(1, 596);
+            this.richTextBox2.Location = new System.Drawing.Point(6, 586);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(160, 40);
@@ -159,12 +162,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(396, 38);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(403, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 25);
+            this.label1.Size = new System.Drawing.Size(247, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "DANH SÁCH PHÒNG";
             // 
@@ -181,8 +184,9 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(772, 368);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(772, 129);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 54);
@@ -193,19 +197,21 @@
             // 
             // btntaophongmoi
             // 
-            this.btntaophongmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntaophongmoi.Location = new System.Drawing.Point(772, 277);
+            this.btntaophongmoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntaophongmoi.BackgroundImage")));
+            this.btntaophongmoi.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntaophongmoi.Location = new System.Drawing.Point(772, 67);
             this.btntaophongmoi.Margin = new System.Windows.Forms.Padding(4);
             this.btntaophongmoi.Name = "btntaophongmoi";
             this.btntaophongmoi.Size = new System.Drawing.Size(216, 54);
             this.btntaophongmoi.TabIndex = 0;
-            this.btntaophongmoi.Text = "Tạo Phòng Mới";
+            this.btntaophongmoi.Text = "tao phòng";
             this.btntaophongmoi.UseVisualStyleBackColor = true;
             this.btntaophongmoi.Click += new System.EventHandler(this.btntaophongmoi_Click);
             // 
             // pnlgame
             // 
-            this.pnlgame.BackgroundImage = global::Client.Properties.Resources.bgcaro;
+            this.pnlgame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlgame.BackgroundImage")));
+            this.pnlgame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlgame.Controls.Add(this.label4);
             this.pnlgame.Controls.Add(this.button1);
             this.pnlgame.Controls.Add(this.pictureBox3);
@@ -222,13 +228,26 @@
             this.pnlgame.TabIndex = 9;
             this.pnlgame.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.LightSalmon;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 43);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "time";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(663, 55);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(618, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(159, 39);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
+            this.button1.Text = "play again";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -261,7 +280,8 @@
             // 
             this.rtbchat.BackColor = System.Drawing.Color.LightCyan;
             this.rtbchat.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbchat.Location = new System.Drawing.Point(847, 635);
+            this.rtbchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbchat.Location = new System.Drawing.Point(835, 598);
             this.rtbchat.Margin = new System.Windows.Forms.Padding(4);
             this.rtbchat.Name = "rtbchat";
             this.rtbchat.Size = new System.Drawing.Size(220, 34);
@@ -271,27 +291,31 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Client.Properties.Resources.bgchat;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(905, 223);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(67, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Client.Properties.Resources.bgchat;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(59, 219);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(248, 85);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -304,8 +328,8 @@
             // 
             this.rtbcontentchat.BackColor = System.Drawing.Color.LightCyan;
             this.rtbcontentchat.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbcontentchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbcontentchat.Location = new System.Drawing.Point(845, 480);
+            this.rtbcontentchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbcontentchat.Location = new System.Drawing.Point(835, 440);
             this.rtbcontentchat.Margin = new System.Windows.Forms.Padding(4);
             this.rtbcontentchat.Name = "rtbcontentchat";
             this.rtbcontentchat.Size = new System.Drawing.Size(221, 151);
@@ -317,16 +341,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 39);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
             // 
             // timer2
             // 
