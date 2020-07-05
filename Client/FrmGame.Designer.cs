@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.plroom = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ltbdanhsachphonggame = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,13 +61,13 @@
             // 
             this.plroom.BackgroundImage = global::Client.Properties.Resources.bgroom;
             this.plroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.plroom.Controls.Add(this.textBox1);
             this.plroom.Controls.Add(this.listView2);
             this.plroom.Controls.Add(this.listView1);
             this.plroom.Controls.Add(this.label3);
             this.plroom.Controls.Add(this.label2);
             this.plroom.Controls.Add(this.button3);
             this.plroom.Controls.Add(this.richTextBox2);
-            this.plroom.Controls.Add(this.button1);
             this.plroom.Controls.Add(this.label1);
             this.plroom.Controls.Add(this.ltbdanhsachphonggame);
             this.plroom.Controls.Add(this.button2);
@@ -79,6 +79,13 @@
             this.plroom.Size = new System.Drawing.Size(1069, 666);
             this.plroom.TabIndex = 10;
             this.plroom.Paint += new System.Windows.Forms.PaintEventHandler(this.plroom_Paint);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(375, 66);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(336, 22);
+            this.textBox1.TabIndex = 16;
             // 
             // listView2
             // 
@@ -149,18 +156,6 @@
             this.richTextBox2.TabIndex = 9;
             this.richTextBox2.Text = "";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(787, 193);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 54);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Tìm Phòng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -178,10 +173,10 @@
             // 
             this.ltbdanhsachphonggame.FormattingEnabled = true;
             this.ltbdanhsachphonggame.ItemHeight = 16;
-            this.ltbdanhsachphonggame.Location = new System.Drawing.Point(375, 74);
+            this.ltbdanhsachphonggame.Location = new System.Drawing.Point(375, 90);
             this.ltbdanhsachphonggame.Margin = new System.Windows.Forms.Padding(4);
             this.ltbdanhsachphonggame.Name = "ltbdanhsachphonggame";
-            this.ltbdanhsachphonggame.Size = new System.Drawing.Size(336, 500);
+            this.ltbdanhsachphonggame.Size = new System.Drawing.Size(336, 484);
             this.ltbdanhsachphonggame.TabIndex = 5;
             this.ltbdanhsachphonggame.SelectedIndexChanged += new System.EventHandler(this.ltbdanhsachphonggame_SelectedIndexChanged);
             // 
@@ -309,7 +304,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmGame
@@ -354,11 +349,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

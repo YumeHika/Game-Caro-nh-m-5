@@ -219,8 +219,7 @@ namespace Server
         private void vaophong(string str,Player ple)
         {
             a_str = str.Split(',');
-            int idphong = int.Parse(a_str[1]);
-            Player plr = timphong(idphong);
+            Player plr = timphong(a_str[1]);
             bdata b = new bdata();
             Room r=plr.room;
             if (r.siso == 1)
@@ -238,7 +237,7 @@ namespace Server
                 ple.socket.Send(b.data, b.data.Length, SocketFlags.None);
             }
         }
-        private Player timphong(int idphong)
+        private Player timphong(string idphong)
         {
             foreach (Player plr in player)
             {
@@ -261,7 +260,7 @@ namespace Server
                 string danhsachphong = "DANHSACHPHONGGAME|,";
                 foreach (Room r in phong)
                 {
-                    danhsachphong += r.sophong+"\t("+r.siso + "/2),";
+                    danhsachphong += r.sophong+" ("+r.siso + "/2),";
                 }
                 data = Encoding.Unicode.GetBytes(danhsachphong);
                 ply.socket.Send(data, data.Length, SocketFlags.None);
@@ -276,7 +275,7 @@ namespace Server
         private void taophongmoi(string str, Player ple)
         {
             Room r = new Room();
-            r.sophong = phong.Count+1;
+            r.sophong = a_str[1];
             r.siso = 1;
             r.plnguoichoi1 = ple;
             phong.Add(r);

@@ -8,26 +8,16 @@ namespace General
 {
     public class Room
     {
-        public int _sophong;
-        public int _siso;
         public Player _plnguoichoi1;
         public Player _plnguoichoi2;
         public Room()
         {
-            _siso =_sophong= 0;
+            siso = 0;
             plnguoichoi1 = null;
             plnguoichoi2 = null;
         }
-        public int sophong
-        {
-            get { return this._sophong; }
-            set { this._sophong = value; }
-        }
-        public int siso
-        {
-            get { return this._siso; }
-            set { this._siso = value; }
-        }
+        public string sophong { get; set; }
+        public int siso { get; set; }
         public Player plnguoichoi1
         {
             get { return this._plnguoichoi1; }

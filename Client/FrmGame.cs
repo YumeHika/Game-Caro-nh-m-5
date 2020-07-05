@@ -15,7 +15,7 @@ namespace Client
     {
         public FrmGame()
         {
-            
+
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
@@ -142,7 +142,7 @@ namespace Client
         public void taophongmoi()
         {
             bdata b = new bdata();
-            b.data = Encoding.Unicode.GetBytes("TAOPHONGMOI|,");
+            b.data = Encoding.Unicode.GetBytes("TAOPHONGMOI|" + username);
             client.Send(b.data, b.data.Length, SocketFlags.None);
             rtbcontentchat.AppendText("Tạo Phòng Thành Công");
             if (lbidphong.Text == "0")
@@ -243,9 +243,12 @@ namespace Client
             ltbdanhsachphonggame.Items.Clear();
             for (int i = 1; i < a_str.Length-1; i++)
             {
-                ltbdanhsachphonggame.Items.Add("Phòng " + a_str[i]);
+                if (a_str[i].Contains(textBox1.Text))
+                {
+                    ltbdanhsachphonggame.Items.Add("Phòng của " + a_str[i]);
+                }
+                
             }
-            
         }
         private void danhsachnguoichoi(string str)
         {
@@ -383,15 +386,17 @@ namespace Client
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            laydanhsachphonggame();
-            laydanhsachnguoichoi();
-            
+                laydanhsachphonggame();
+                laydanhsachnguoichoi();
+
         }
 
         private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
             client.Close();
         }
+
+
 
         private void ltbdanhsachphonggame_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -401,7 +406,7 @@ namespace Client
             }
             str = ltbdanhsachphonggame.SelectedItem.ToString();
             a_str = str.Split('(');
-            str = a_str[0].Replace("Phòng", "").Trim();
+            str = a_str[0].Replace("Phòng của ", "").Trim();
             try
             {
                 byte[] data = new byte[1024];
