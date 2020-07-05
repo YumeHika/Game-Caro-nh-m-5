@@ -207,7 +207,11 @@ namespace Client
                     chat(str);
                     break;
                 case "CHAT":
-                    listView1.Items.Add(a_str[1] + ": " + a_str[2]);
+                    richTextBox1.SelectionColor = Color.Blue;
+                    richTextBox1.AppendText("\n" + a_str[1] + ": ");
+                    richTextBox1.SelectionColor = Color.Green;
+                    richTextBox1.AppendText(a_str[2]);
+                    richTextBox1.ScrollToCaret();
                     break;
                 case "PHANNGUOICHOI":
                     PhanNguoiChoi(str);
