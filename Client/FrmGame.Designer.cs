@@ -59,7 +59,7 @@
             // 
             // plroom
             // 
-            this.plroom.BackgroundImage = global::Client.Properties.Resources._5a786ab701b3d_thumb900;
+            this.plroom.BackgroundImage = global::Client.Properties.Resources.bgroom;
             this.plroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.plroom.Controls.Add(this.listView2);
             this.plroom.Controls.Add(this.listView1);
