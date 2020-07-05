@@ -32,6 +32,7 @@
             this.btnplay = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtIP = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             this.btnplay.BackColor = System.Drawing.Color.LightGray;
             this.btnplay.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnplay.Location = new System.Drawing.Point(464, 354);
-            this.btnplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnplay.Margin = new System.Windows.Forms.Padding(4);
             this.btnplay.Name = "btnplay";
             this.btnplay.Size = new System.Drawing.Size(137, 53);
             this.btnplay.TabIndex = 2;
@@ -72,10 +73,18 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(424, 279);
+            this.txtusername.Location = new System.Drawing.Point(435, 308);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(214, 22);
             this.txtusername.TabIndex = 4;
+            // 
+            // txtIP
+            // 
+            this.txtIP.Location = new System.Drawing.Point(429, 266);
+            this.txtIP.Name = "txtIP";
+            this.txtIP.Size = new System.Drawing.Size(214, 22);
+            this.txtIP.TabIndex = 5;
+            this.txtIP.Text = "127.0.0.1";
             // 
             // MainMenu
             // 
@@ -85,14 +94,14 @@
             this.BackgroundImage = global::Client.Properties.Resources.aGnoymryw7yUTj5hs04DtMaelkBLRgnLWPrQcsFJsPM1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1072, 554);
+            this.Controls.Add(this.txtIP);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnplay);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Text = "Mainmenu";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +113,6 @@
         private System.Windows.Forms.Button btnplay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.TextBox txtIP;
     }
 }

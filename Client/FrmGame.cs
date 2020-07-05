@@ -385,16 +385,18 @@ namespace Client
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            try {
                 laydanhsachphonggame();
                 laydanhsachnguoichoi();
+            }
+            catch { Close(); }
 
         }
 
         private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
+           
             client.Close();
-            timer1.Stop();
         }
 
 
