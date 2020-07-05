@@ -315,14 +315,6 @@ namespace Client
             rtbcontentchat.ScrollToCaret();
             
         }
-        private void AppendTextThongBao(string thongbao)
-        {
-            rtbcontentchat.SelectionColor = Color.Red;
-            rtbcontentchat.AppendText(thongbao);
-            rtbcontentchat.ScrollToCaret();
-
-            rtbchat.Select();
-        }
 
 
         private void rtbchat_KeyPress(object sender, KeyPressEventArgs e)
@@ -344,10 +336,6 @@ namespace Client
             taophongmoi();
             NguoiChoi = 2;
         }
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -371,21 +359,6 @@ namespace Client
             {
                 client.Close();
             }
-        }
-
-        private void plroom_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -416,12 +389,6 @@ namespace Client
             byte[] data = new byte[1024];
             data = Encoding.Unicode.GetBytes("CHOILAI|," + NguoiChoi + ",");
             client.Send(data, data.Length, SocketFlags.None);
-        }
-
-        private void choilai()
-        {
-
-            
         }
 
         private void ltbdanhsachphonggame_SelectedIndexChanged(object sender, EventArgs e)

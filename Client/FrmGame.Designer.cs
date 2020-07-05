@@ -79,7 +79,6 @@
             this.plroom.Name = "plroom";
             this.plroom.Size = new System.Drawing.Size(1069, 666);
             this.plroom.TabIndex = 10;
-            this.plroom.Paint += new System.Windows.Forms.PaintEventHandler(this.plroom_Paint);
             // 
             // richTextBox1
             // 
