@@ -18,9 +18,8 @@ namespace Client
 
         private void btnplay_Click(object sender, EventArgs e)
         {
-            
-            Form show = new Mode();
-            show.Show();
+            Form man = new FrmLogin();
+            man.Show();
             this.Hide();
 
             
