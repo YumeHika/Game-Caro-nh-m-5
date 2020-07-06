@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(314, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(447, 54);
+            this.label1.Size = new System.Drawing.Size(434, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "caro with umaru";
             // 
@@ -52,10 +52,10 @@
             this.btnplay.BackColor = System.Drawing.Color.LightGray;
             this.btnplay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnplay.BackgroundImage")));
             this.btnplay.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnplay.Location = new System.Drawing.Point(454, 324);
+            this.btnplay.Location = new System.Drawing.Point(473, 322);
             this.btnplay.Margin = new System.Windows.Forms.Padding(4);
             this.btnplay.Name = "btnplay";
-            this.btnplay.Size = new System.Drawing.Size(155, 53);
+            this.btnplay.Size = new System.Drawing.Size(164, 53);
             this.btnplay.TabIndex = 2;
             this.btnplay.Text = "PLAY";
             this.btnplay.UseVisualStyleBackColor = false;
@@ -64,7 +64,7 @@
             // txtusername
             // 
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(415, 266);
+            this.txtusername.Location = new System.Drawing.Point(445, 210);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(214, 31);
@@ -73,7 +73,7 @@
             // txtIP
             // 
             this.txtIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIP.Location = new System.Drawing.Point(415, 216);
+            this.txtIP.Location = new System.Drawing.Point(445, 267);
             this.txtIP.Multiline = true;
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(214, 30);
@@ -85,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(242, 267);
+            this.label2.Location = new System.Drawing.Point(262, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 30);
             this.label2.TabIndex = 6;
