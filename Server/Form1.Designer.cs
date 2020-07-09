@@ -31,9 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CloseServer = new System.Windows.Forms.Button();
+            this.DongForm = new System.Windows.Forms.Button();
+            this.OpenServer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -41,84 +41,76 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(416, 271);
+            this.groupBox1.Size = new System.Drawing.Size(312, 220);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "info";
+            this.groupBox1.Text = "Info";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Black;
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(9, 23);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.richTextBox1.Location = new System.Drawing.Point(10, 19);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(399, 240);
+            this.richTextBox1.Size = new System.Drawing.Size(299, 195);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(3, 282);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Controls.Add(this.CloseServer);
+            this.groupBox3.Controls.Add(this.DongForm);
+            this.groupBox3.Controls.Add(this.OpenServer);
+            this.groupBox3.Location = new System.Drawing.Point(2, 229);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(416, 88);
+            this.groupBox3.Size = new System.Drawing.Size(312, 72);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // button3
+            // CloseServer
             // 
-            this.button3.Location = new System.Drawing.Point(24, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 28);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Đóng Server";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.CloseServer.Location = new System.Drawing.Point(18, 13);
+            this.CloseServer.Name = "CloseServer";
+            this.CloseServer.Size = new System.Drawing.Size(118, 23);
+            this.CloseServer.TabIndex = 2;
+            this.CloseServer.Text = "Đóng Server";
+            this.CloseServer.UseVisualStyleBackColor = true;
+            this.CloseServer.Visible = false;
+            this.CloseServer.Click += new System.EventHandler(this.CloseServer_Click);
             // 
-            // button2
+            // DongForm
             // 
-            this.button2.Location = new System.Drawing.Point(204, 52);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.DongForm.Location = new System.Drawing.Point(180, 42);
+            this.DongForm.Name = "DongForm";
+            this.DongForm.Size = new System.Drawing.Size(126, 23);
+            this.DongForm.TabIndex = 1;
+            this.DongForm.Text = "Đóng";
+            this.DongForm.UseVisualStyleBackColor = true;
+            this.DongForm.Click += new System.EventHandler(this.DongForm_Click);
             // 
-            // button1
+            // OpenServer
             // 
-            this.button1.Location = new System.Drawing.Point(24, 52);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Mở Server";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OpenServer.Location = new System.Drawing.Point(18, 42);
+            this.OpenServer.Name = "OpenServer";
+            this.OpenServer.Size = new System.Drawing.Size(118, 23);
+            this.OpenServer.TabIndex = 0;
+            this.OpenServer.Text = "Mở Server";
+            this.OpenServer.UseVisualStyleBackColor = true;
+            this.OpenServer.Click += new System.EventHandler(this.OpenServer_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 383);
+            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.ClientSize = new System.Drawing.Size(327, 311);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Server";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -130,9 +122,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DongForm;
+        private System.Windows.Forms.Button OpenServer;
+        private System.Windows.Forms.Button CloseServer;
     }
 }
 

@@ -19,10 +19,12 @@ namespace Client
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
+
         private class bdata
         {
             public byte[] data = new byte[1024];
         }
+
         int[,] Board;
         bool flag=true;
         public int NguoiChoi = 0;
@@ -32,6 +34,7 @@ namespace Client
         public string username = "";
         public bool mosansang = false;
         public Socket client;
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             if (flag)
@@ -61,6 +64,7 @@ namespace Client
             }
 
         }
+
         private bool KiemTraThangThua(int x, int y)
         {
             int width = panel1.Width;
@@ -104,12 +108,14 @@ namespace Client
             }
             return false;
         }
+
         Rectangle rect = new Rectangle();
         private Bitmap QuanO = Client.Properties.Resources.bmpHuman;
         private Bitmap QuanX = Client.Properties.Resources.bmpMachine;
         private Bitmap Thang = Client.Properties.Resources.thang;
         private Bitmap Thua = Client.Properties.Resources.thua;
         int x, y;
+
         private void VeQuanCoCaro(int x, int y,int nc)
         {
             SolidBrush sb = new SolidBrush(Color.Blue);
@@ -118,6 +124,7 @@ namespace Client
             g.DrawImage((nc == 2) ? QuanO : QuanX, rect);
             Board[y, x] = nc;
         }
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             x=e.X - (e.X % 20);
@@ -183,10 +190,12 @@ namespace Client
             thclient.IsBackground = true;
             thclient.Start();
         }
+
         string str;
         string[] a_str;
         int recv;
         bdata bb = new bdata();
+
         private void LangNgheServer()
         {
             while (true)
@@ -207,6 +216,7 @@ namespace Client
         }
 
         int songuoichoi = 0;
+
         private void LangNgheServer2(string s,string str)
         {
             switch (s)
@@ -275,10 +285,10 @@ namespace Client
                 if (a_str[i].Contains(textBox1.Text))
                 {
                     ltbdanhsachphonggame.Items.Add("Phòng của " + a_str[i]);
-                }
-                
+                }  
             }
         }
+
         private void danhsachnguoichoi(string str)
         {
             a_str = str.Split(',');
@@ -296,10 +306,12 @@ namespace Client
             a_str = str.Split(',');
             rtbcontentchat.AppendText("\n"+a_str[1]+" đã vào phòng");
         }
+
         private void Idphong(string str)
         {
             lbidphong.Text = str.Split(',')[1];
         }
+
         private void Winner(string str)
         {
             a_str = str.Split(',');
@@ -307,9 +319,9 @@ namespace Client
             KiemTraThangThua(int.Parse(a_str[2]), int.Parse(a_str[3]));
             rect = new Rectangle(0, 10, 413, 281);
             Graphics g = panel1.CreateGraphics();
-            g.DrawImage(Thua, rect);
-            
+            g.DrawImage(Thua, rect);  
         }
+
         private void DanhCaRo(string str)
         {
             a_str = str.Split(',');
@@ -332,7 +344,6 @@ namespace Client
             rtbcontentchat.ScrollToCaret();
             
         }
-
 
         private void rtbchat_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -394,7 +405,6 @@ namespace Client
                 laydanhsachnguoichoi();
             }
             catch { Close(); }
-
         }
 
         private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
@@ -410,6 +420,7 @@ namespace Client
         }
 
         int thoigianconlai = 30;
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             label4.Text = Math.Max(thoigianconlai, 0).ToString();
@@ -455,7 +466,5 @@ namespace Client
                 client.Close();
             }
         }
-
-     
     }
 }

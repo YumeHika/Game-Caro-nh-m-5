@@ -20,54 +20,29 @@ namespace Server
             //CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
+
         private class bdata
         {
             public byte[] data = new byte[1024];
         }
+
         Socket server,skclient;
         IPEndPoint ipe;
-        List<Player> player = new List<Player>(); // danh sách player 
-        
+        // danh sách player 
+        List<Player> player = new List<Player>(); 
         List<Room> phong = new List<Room>();
-        Thread thclient; // tạo  luồng của client 
+        // tạo luồng của client 
+        Thread thclient;
         
-        private void button1_Click(object sender, EventArgs e) // mở server để lắng nghe CLient
-        {
-            try
-            {   
-                // Cung cấp một địa chỉ IP chỉ ra rằng máy chủ phải lắng nghe hoạt động của máy khách trên tất cả các giao diện mạng
-                ipe = new IPEndPoint(IPAddress.Any, 9124); 
-                server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-                // socket liên kêts với endpoint(điểm cuối  use bind ) 
-                server.Bind(ipe);
-                // tối đa cho 10 máy client cho phép kết nối nếu máy thứ 11 thì sẽ phản hồi về server đang bận 
-                server.Listen(10);
-                // 1 thread của server
-                Thread thserver = new Thread(new ThreadStart(LangNgheClient)); // chạy tác vụ (phương thức) LangNgheClient 
-                thserver.IsBackground = true;
-                // thread được gọi khi bắt đầu start 
-                thserver.Start();
-
-                button1.Visible = false;
-                button3.Visible = true;
-
-                AppendTextThongBao("Sẵn Sàng Lằng Nghe Kết Nối Từ Client");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
         private void AppendTextThongBao(string s)
         {
             richTextBox1.SelectionColor = Color.Red;
             richTextBox1.AppendText(s);
             richTextBox1.ScrollToCaret();
         }
+
         private void LangNgheClient()
         {
-
             // chạy liên tục lắng nghe không dừng 
             while (true)
             {
@@ -82,6 +57,7 @@ namespace Server
                     
                     thclient = new Thread(LangNgheClientMoi); // thread để các client không xung đột
                     thclient.IsBackground = true;
+                    
                     // bắt đầu chạy ( phương thức ?? )  pl -> nhiều pl thì sẽ chia nhiều luồng k xung đột
                     thclient.Start(pl);
 
@@ -95,6 +71,7 @@ namespace Server
                 }
             }
         }
+
         string str;
         string[] a_str;
         int recv;
@@ -233,6 +210,7 @@ namespace Server
             Player plr = timphong(a_str[1]);
             bdata b = new bdata();
             Room r=plr.room;
+
             if (r.siso == 1)
             {
                 r.siso = 2;
@@ -306,7 +284,9 @@ namespace Server
         private void chatphong(byte[] data, Player ple)
         {
             if (ple.room.siso == 1)
+            {
                 SendAClient(ple.socket, data);
+            }   
             else
             {
                 SendAClient(ple.room.plnguoichoi1.socket, data);
@@ -318,10 +298,12 @@ namespace Server
             a_str = str.Split(',');
             SendAClient((int.Parse(a_str[3]) == 2) ? ple.room.plnguoichoi2.socket : ple.room.plnguoichoi1.socket, data);
         }
+
         private void SendAClient(Socket sk, byte[] data)
         {
             sk.Send(data, data.Length, SocketFlags.None);
         }
+
         private void SendAllClient(byte[] data)
         {
             foreach (Player pl in player)
@@ -330,31 +312,59 @@ namespace Server
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void OpenServer_Click(object sender, EventArgs e) // mở server để lắng nghe CLient
+        {
+            try
+            {
+                // Cung cấp một địa chỉ IP chỉ ra rằng máy chủ phải lắng nghe hoạt động của máy khách trên tất cả các giao diện mạng
+                ipe = new IPEndPoint(IPAddress.Any, 9124);
+                server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+
+                // socket liên kêts với endpoint(điểm cuối  use bind ) 
+                server.Bind(ipe);
+
+                // tối đa cho 10 máy client cho phép kết nối nếu máy thứ 11 thì sẽ phản hồi về server đang bận 
+                server.Listen(10);
+
+                // 1 thread của server
+                Thread thserver = new Thread(new ThreadStart(LangNgheClient));
+
+                // chạy tác vụ (phương thức) LangNgheClient 
+                thserver.IsBackground = true;
+
+                // thread được gọi khi bắt đầu start 
+                thserver.Start();
+
+                OpenServer.Visible = false;
+                CloseServer.Visible = true;
+
+                AppendTextThongBao("Sẵn Sàng Lằng Nghe Kết Nối Từ Client");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void DongForm_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void CloseServer_Click(object sender, EventArgs e)
         {
             try
             {
-                button1.Visible = true;
-                button3.Visible = false;
+                OpenServer.Visible = true;
+                CloseServer.Visible = false;
 
                 server.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
